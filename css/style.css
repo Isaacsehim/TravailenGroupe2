@@ -8,22 +8,27 @@ body {
 
 /* Section Accueil */
 .section-accueil {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('images/pont-audemer.jpg');
+    background:url(../img/pont-audemer1.jpg);
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 15vh 5%;
+}
+
+.accueil-gradient {
+    background: linear-gradient(0deg, rgb(107, 107, 107),  rgba(255, 255, 255, 0.5));
+    width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 15vh 5%;
 }
 
 .accueil-conteneur {
     max-width: 800px;
     background: rgba(0, 0, 0, 0.5);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .accueil-titre {
@@ -32,34 +37,98 @@ body {
 }
 
 .accueil-sous-titre {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
-/* Barre de navigation */
+.accueil-box {
+    width:100%;
+    background:rgb(107, 107, 107);
+    padding:0px;
+    margin:0px;
+}
+
+.accueil-box p {
+    font-size:1rem;
+    text-align:center;
+}
+
+/* Barre de navigations/onglets */
 .barre-navigation {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap:3rem;
     background: rgb(240, 240, 240);
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.bouton-navigation {
+.barre-navigation i {
+    font-size:2rem;
+    margin-top:-1rem;
+}
+
+/*Boutons Onglets*/
+
+#pills-resto-tab,#pills-culture-tab,#pills-adresse-tab,#pills-all-tab {
     font-size: 1.1rem;
     background: rgb(200, 200, 200);
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    transition:0.3s ease;
+    color:#000;
+    margin:0px 10px;
+    font-family: arial;
+    border-radius:15px;
 }
 
-.bouton-navigation:hover {
+#pills-resto-tab.active {
+    background: rgb(170, 170, 170);
+
+}
+
+#pills-culture-tab.active {
+    background: rgb(170, 170, 170);
+
+}
+
+#pills-adresse-tab.active {
+    background: rgb(170, 170, 170);
+
+}
+
+#pills-all-tab.active {
     background: rgb(170, 170, 170);
 }
 
+.nav-link {
+    font-family: playfair display;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background: #fff;
+    color: #DD7230;
+}
+
+/*Contenu des Onglets*/ 
+
+.nav-content {
+    background:#E4E4E4;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-content.active {
+    display:block;
+}
+
 /* Carte Lieu */
+
 .carte-lieu {
     display: flex;
     margin: 5vh auto;
@@ -94,7 +163,8 @@ body {
     margin-bottom: 1rem;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
+    border-radius:15px;
 }
 
 .bouton-informations:hover {
@@ -106,6 +176,42 @@ body {
     font-size: 1rem;
     margin-top: 1rem;
 }
+
+.adresse-lieu i {
+    font-size:1rem;
+}
+
+/*MODAL*/ 
+.modal-content {
+    width:700px;
+}
+
+.modal-body {
+    padding:0px;
+    margin:0px;
+}
+
+.modal-body p {
+    font-size:1rem;
+    text-align:justify;
+}
+
+.modal-body i {
+    font-size:1rem;
+
+}
+
+.modal-body span {
+    font-weight:600;
+    font-size:1.2rem;
+}
+
+.img-cover {
+    width:100%;
+    padding-bottom:20px;
+}
+
+
 
 /* Section Contenu */
 .section-contenu {
@@ -149,7 +255,7 @@ body {
     }
 
     .accueil-sous-titre {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .barre-navigation {
@@ -201,7 +307,7 @@ body {
     }
 
     .accueil-sous-titre {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .barre-navigation {

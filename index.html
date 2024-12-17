@@ -1,43 +1,269 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pont-Audemer</title>
+    <!-- Liens vers les fichiers CSS -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
+    <!-- Script pour les icônes FontAwesome -->
+    <script src="htt</li>ps://kit.fontawesome.com/dd845416b8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <!-- Section d'accueil -->
     <header class="section-accueil">
-        <div class="accueil-conteneur">
-            <h1 class="accueil-titre">Pont-Audemer</h1>
-            <p class="accueil-sous-titre">"Joyau de la normandie, entre histoire, culture et paysages enchanteurs. huhu"</p>
+        <div class="accueil-gradient">
+            <div class="accueil-conteneur">
+                <h1 class="accueil-titre">Pont-Audemer</h1>
+                <p class="accueil-sous-titre">Pont-Audemer, surnommée la "Venise normande", est une charmante ville située dans la vallée de la Risle, en Normandie. Elle est connue pour ses canaux pittoresques, ses maisons à colombages et son riche patrimoine historique.
+                </p>
+            </div>
         </div>
     </header>
-    <nav class="barre-navigation">
-        <button class="bouton-navigation">Restaurants</button>
-        <button class="bouton-navigation">Lieux Culturels</button>
-        <button class="bouton-navigation">Bonnes adresses</button>
-    </nav>
-    <main>
-        <section class="carte-lieu">
-            <img src="image.jpg" alt="lieu" class="image-lieu">
-            <div class="contenu-lieu">
-                <h2 class="titre-lieu">Nom du lieu</h2>
-                <button class="bouton-informations">Afficher les informations</button>
-                <p class="description-lieu">Description courte du lieu sur plusieurs lignes avec des informations utiles.</p>
-                <p class="adresse-lieu">Adresse complète, sur une ligne <br> Call to action ?</p>
+    <!-- Barre de navigation -->
+    <section class="barre-navigation">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+                    type="button" role="tab" aria-controls="pills-all" aria-selected="true">Tous les lieux</button>
+            </li>
+            <li class="nav-item" role="presentation"></li>
+                <button class="nav-link" id="pills-resto-tab" data-bs-toggle="pill" data-bs-target="#pills-resto"
+                    type="button" role="tab" aria-controls="pills-resto" aria-selected="false">Restaurants</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-culture-tab" data-bs-toggle="pill" data-bs-target="#pills-culture"
+                    type="button" role="tab" aria-controls="pills-culture" aria-selected="false">Lieux culturels</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-adresse-tab" data-bs-toggle="pill" data-bs-target="#pills-adresse"
+                    type="button" role="tab" aria-controls="pills-adresse" aria-selected="false">Bonnes adresses</button>
+            </li>
+        </ul>
+    </section>
+    <!-- Contenu des onglets -->
+    <section class="nav-content">
+        <div class="tab-content" id="pills-tabContent">
+            <!-- Onglet "Tous les lieux" -->
+            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                tabindex="0">
+                <section class="carte-lieu">
+                    <img src="https://placehold.co/600x300/png" alt="lieu" class="image-lieu">
+                    <div class="contenu-lieu">
+                        <h2 class="titre-lieu">Nom du lieu</h2>
+                        <button class="bouton-informations" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Afficher les informations</button>
+                        <p class="description-lieu">Description courte du lieu sur plusieurs lignes avec des
+                            informations
+                            utiles.</p>
+                        <p class="adresse-lieu"><i class="fa-solid fa-location-dot"></i> Adresse complète, sur une ligne
+                        </p>
+                    </div>
+                </section>
+            <!-- Modal pour les informations du lieu -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Nom du lieu</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://placehold.co/600x300/png" class="img-cover">
+                            <span><i class="fa-regular fa-message"></i> Description</span>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo alias doloremque esse amet quisquam. Voluptate nobis animi illum earum ducimus nemo accusantium numquam itaque possimus illo omnis laudantium, reiciendis fugit.</p>
+                            <span><i class="fa-solid fa-location-dot"></i> Localisation</span>
+                            <p>Adresse ligne informations, 11700 Code postal Ville</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+            <!-- Modal dynamique pour les informations du lieu -->
+            <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="infoModalLabel">Nom du lieu</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Le contenu sera mis à jour dynamiquement par JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Onglet "Restaurants" -->
+            <div class="tab-pane fade" id="pills-resto" role="tabpanel" aria-labelledby="pills-resto-tab" tabindex="0">
+                <section class="carte-lieu">
+                    <img src="img/Restaurants/Vieux Puits - Terrase.jpg" alt="lieu" class="image-lieu">
+                    <div class="contenu-lieu">
+                        <h2 class="titre-lieu">Le vieux puits</h2>
+                        <button class="bouton-informations" data-bs-toggle="modal"
+                            data-bs-target="#modal-resto-1">Afficher les informations</button>
+                        <p class="description-lieu">Ce lieu mythique à l’âme bucolique saura vous charmer, chargé d'histoire il est un véritable monument patrimonial de cette Venise normande.</p>
+                        <p class="adresse-lieu"><i class="fa-solid fa-location-dot"></i> 6 Rue Notre-dame-du-pré, Pont-Audemer
+                        </p>
+                    </div>
+                </section>
+                <!-- Modal pour les informations du restaurant -->
+                <div class="modal fade" id="modal-resto-1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Le vieux puits</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/Restaurants/Vieux Puits - Interieur.jpg" class="img-cover">
+                                <span><i class="fa-regular fa-message"></i> Description</span>
+                                <p>Découvrez un voyage culinaire au cœur des saveurs françaises et méditerranéennes. Ce restaurant allie authenticité et créativité, proposant des plats faits maison à partir de produits frais et de saison. De délicieuses spécialités provençales, des fruits de mer savoureux et des viandes finement préparées raviront les palais les plus exigeants. L'ambiance chaleureuse et élégante de la salle, associée à un service attentionné, offre une expérience gastronomique inoubliable. Que ce soit pour un dîner romantique ou un repas entre amis, ce lieu invite à la convivialité et à la gourmandise, le tout dans un cadre raffiné et accueillant. Bon appétit !</p>
+                                <span><i class="fa-solid fa-location-dot"></i> Localisation</span>
+                                <p>6 Rue Notre-dame-du-pré, 27500 Pont-Audemer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Répéter pour chaque restaurant -->
+            </div>
+            <!-- Onglet "Lieux culturels" -->
+            <div class="tab-pane fade" id="pills-culture" role="tabpanel" aria-labelledby="pills-culture-tab"
+                tabindex="0">
+                <section class="carte-lieu">
+                    <img src="img/Lieux Culturels/alfred canel - exterieur2.jpg" alt="lieu" class="image-lieu">
+                    <div class="contenu-lieu">
+                        <h2 class="titre-lieu">Musée Alfred-Canel</h2>
+                        <button class="bouton-informations" data-bs-toggle="modal"
+                            data-bs-target="#modal-culture-1">Afficher les informations</button>
+                        <p class="description-lieu">La maison de l'écrivain Alfred Canel abrite des fonds anciens de bibliothèques de grande réputation avec des galeries d’arts</p>
+                        <p class="adresse-lieu"><i class="fa-solid fa-location-dot"></i> 64, rue de la République, Pont Audemer
+                        </p>
+                    </div>
+                </section>
+                <!-- Modal pour les informations du lieu culturel -->
+                <div class="modal fade" id="modal-culture-1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Musée Alfred-Canel</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/Lieux Culturels/alfred canel - interieur.jpg" class="img-cover">
+                                <span><i class="fa-regular fa-message"></i> Description</span>
+                                <p>Le Musée Alfred-Canel de Pont-Audemer est un véritable écrin culturel où se mêlent art, histoire et sciences. Installé dans l'ancienne demeure de l'écrivain Alfred Canel, ce musée à taille humaine offre une expérience unique et intimiste. Sa riche collection comprend des œuvres d'art, des objets du quotidien, des artefacts archéologiques et des livres rares issus de son imposante bibliothèque patrimoniale. Chaque salle invite à un voyage dans le temps, témoignant de la diversité des savoirs du XIXᵉ siècle. Des expositions temporaires viennent enrichir la visite, faisant de ce lieu un incontournable pour les amateurs de culture et de patrimoine normand.</p>
+                                <span><i class="fa-solid fa-location-dot"></i> Localisation</span>
+                                <p>64 rue de la République, 27500 Pont Audemer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Répéter pour chaque lieu culturel -->
+            </div>
+            <!-- Onglet "Bonnes adresses" -->
+            <div class="tab-pane fade" id="pills-adresse" role="tabpanel" aria-labelledby="pills-adresse-tab"
+                tabindex="0">
+                <section class="carte-lieu">
+                    <img src="img/Bonnes Adresses/lafonderie - exterieur.jpg" alt="lieu" class="image-lieu">
+                    <div class="contenu-lieu">
+                        <h2 class="titre-lieu">La Fonderie</h2>
+                        <button class="bouton-informations" data-bs-toggle="modal"
+                            data-bs-target="#modal-ad-1">Afficher les informations</button>
+                        <p class="description-lieu">Un lieu de diverstissement avec Casino, billard, et bowling.</p>
+                        <p class="adresse-lieu"><i class="fa-solid fa-location-dot"></i> 60 rue du Maquis Surcouf, Pont-Audemer
+                        </p>
+                    </div>
+                </section>
+                <!-- Modal pour les informations de la bonne adresse -->
+                <div class="modal fade" id="modal-ad-1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">La Fonderie</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/Bonnes Adresses/lafonderie - interieur2.jpg" class="img-cover">
+                                <span><i class="fa-regular fa-message"></i> Description</span>
+                                <p>Un lieu de divertissement idéal pour passer un moment convivial entre amis ou en famille. Avec ses pistes modernes et animées, il offre une expérience de bowling dynamique et fun. Le casino, quant à lui, propose une gamme de jeux de table et de machines à sous, offrant une ambiance excitante pour les amateurs de jeux de hasard. Pour compléter l'expérience, un espace billard permet de se détendre tout en s'affrontant sur des tables de qualité. Ce lieu multifonctionnel garantit des heures de divertissement dans un cadre animé et convivial.</p>
+                                <span><i class="fa-solid fa-location-dot"></i> Localisation</span>
+                                <p>60 rue du Maquis Surcouf, 27500 Pont-Audemer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Répéter pour chaque bonne adresse -->
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Section historique -->
         <section class="section-contenu">
             <h3 class="contenu-titre">Historique</h3>
-            <p class="contenu-texte">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+            <p class="contenu-texte">Pont-Audemer, charmante ville de Normandie, possède un riche passé historique.
+                Fondée à l’époque médiévale, elle doit son développement à sa position stratégique sur la Risle, qui
+                favorisait le commerce fluvial. La ville s’épanouit dès le XIe siècle grâce à son artisanat florissant,
+                notamment dans le travail du cuir et du textile. Au Moyen Âge, Pont-Audemer se dote de fortifications et
+                devient un centre d’échanges important. Son patrimoine architectural, avec ses maisons à colombages et
+                ses ruelles pittoresques, témoigne de cette époque prospère.
+                <br />
+                Pendant la Seconde Guerre mondiale, Pont-Audemer subit des dommages, mais elle a su préserver une grande
+                partie de son charme historique. Aujourd’hui, elle est surnommée "la Venise normande" en raison de ses
+                nombreux canaux, qui attirent les visiteurs en quête d’authenticité et de beauté.
+            </p>
+            <!-- Section patrimoine -->
             <h3 class="contenu-titre">Patrimoine</h3>
-            <p class="contenu-texte">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+            <p class="contenu-texte">
+                Le centre-ville est caractérisé par ses maisons à pans de bois et encorbellements, souvent bordées de
+                canaux qui rappellent l'activité des tanneurs d'antan. Ces canaux, vestiges du passé industriel de la
+                ville, offrent des promenades pittoresques aux visiteurs.
+                Plus Beaux Détours
+                <br />
+                L'église Saint-Ouen, édifice gothique du XVIᵉ siècle, est remarquable pour ses vitraux Renaissance et
+                son orgue du XVIᵉ siècle. Elle constitue un témoignage précieux de l'architecture religieuse normande.
+                Tourisme Pontaudemer Risle Normande
+                <br />
+                Le musée Alfred Canel, installé dans l'ancienne demeure de l'écrivain, présente une collection
+                éclectique allant des arts aux sciences, reflétant l'esprit des cabinets de curiosités du XIXᵉ siècle.
+                Il abrite également une bibliothèque avec des fonds anciens, offrant un voyage culturel au cœur de la
+                Normandie.
+                Tourisme Pontaudemer Risle Normande
+                <br />
+                La Galerie Théroulde, l'un des bâtiments les plus anciens de la ville, accueille des expositions mettant
+                en valeur le patrimoine local ainsi que des œuvres d'artistes et d'artisans d'art. Elle illustre la
+                vitalité artistique de Pont-Audemer et son attachement à la préservation de son héritage culturel.
+                Ville de Pont-Audemer
+                <br />
+                Les ruelles médiévales, les quais aménagés et les nombreux ponts offrent un cadre propice à la flânerie,
+                permettant de découvrir l'âme authentique de cette cité normande. Des circuits touristiques, tels que le
+                "Circuit du patrimoine", guident les visiteurs à travers les trésors architecturaux et historiques de la
+                ville.
+                Cirkwi
+                <br />
+                Pont-Audemer, par son patrimoine préservé et sa capacité à intégrer des éléments contemporains, demeure
+                une destination incontournable pour les amoureux d'histoire et de culture en Normandie.
+            </p>
         </section>
     </main>
+    <!-- Pied de page -->
     <footer class="footer">
         <p class="footer-texte">© 2024 Pont-Audemer. Tous droits réservés | Crew Turbo Flew 2024</p>
     </footer>
+    <!-- Scripts JavaScript -->
+    <script src="node_modules\@popperjs\core\dist\umd\popper.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
     <script src="assets/script.js"></script>
 </body>
+
 </html>

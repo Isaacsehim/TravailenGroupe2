@@ -1,45 +1,89 @@
-{
-    "restaurants": [
+[
+  {
+    "type": "Restaurant",
+    "places": [
       {
-        "name": "Le Gourmet Havrais",
-        "description": "Un restaurant élégant proposant une cuisine locale et raffinée.",
-        "address": "12 Rue de Paris, Le Havre",
-        "image": "https://picsum.photos/200/300?random=1.webp"
+        "name": "LE VIEUX PUITS",
+        "description": "Ce lieu mythique à l’âme bucolique saura vous charmer, chargé d'histoire il est un véritable monument patrimonial de cette Venise normande.",
+        "address": "6 Rue Notre-dame-du-pré, Pont-Audemer",
+        "image": "Vieux Puits - Interieur.jpg"
       },
       {
-        "name": "Chez Mario",
-        "description": "Un petit coin d’Italie avec des pizzas au feu de bois et des pâtes maison.",
-        "address": "45 Avenue Foch, Le Havre",
-        "image": "https://picsum.photos/200/300?random=2.webp"
+        "name": "BELLE ISLE SUR RISLE",
+        "description": "l’hôtel Belle Isle sur Risle vaut bien un petit détour ! Grande et belle demeure du XIXe siècle, sur une île fluviale aménagée en parc de 2,5 ha aux arbres centenaires et rosiers d’antan, découvrez le charme grand confort",
+        "address": "112 route de Rouen, 27500 Pont-Audemer",
+        "image": "Belle-Isle-sur-Risle-Intérieur2.jpg"
+      },
+      {
+        "name": "L'ENDROIT BISCORNU",
+        "description": "Bistrot, brasserie, bar à vin, l'établissement vous accueille dans une ambiance sympathique et souriante. En famille ou entre amis, goûtez au foie gras de canard maison, au burger végétarien.",
+        "address": "18 Rue de la République, 27500 Pont-Audemer France",
+        "image": "lendroit-biscornu - interieur.jpg"
+      },
+      {
+        "name": "O Ciné Fil",
+        "description": "votre restaurant traditionnel à Pont-Audemer, régalez vos papilles avec des produits frais et de saison. Au menu , de la cuisine  maison  française et de bistrot 100% faite maison.",
+        "address": "7 rue place de la Ville, 27500 Pont-Audemer",
+        "image": "ocinefil - interieur2.jpg"
+      },
+      {
+        "name": "BISTROT DU HAVRE",
+        "description": "Charmant petit restaurant à pans de bois, qui évoque l’ambiance chaleureuse et conviviale d’une brasserie de quartier.",
+        "address": "3 Place du Pot D Etain, 27500 Pont-Audemer France",
+        "image": "bistrot-du-havre - interieur.jpg"
       }
-    ],
-    "cultural": [
+    ]
+  },
+  {
+    "type": "Lieux Culturels",
+    "places": [
       {
-        "name": "Musée d'Art Moderne André Malraux (MuMa)",
-        "description": "Découvrez l'une des plus grandes collections impressionnistes de France.",
-        "address": "2 Boulevard Clemenceau, Le Havre",
-        "image": "https://picsum.photos/200/300?random=3.webp"
+        "name": "Musée Alfred-Canel",
+        "description": "La maison de l'écrivain Alfred Canel abrite des fonds anciens de bibliothèques de grande réputation avec des galeries d’arts.",
+        "address": "64, rue de la République, 27500 Pont Audemer",
+        "image": "alfred canel - interieur.jpg"
       },
       {
-        "name": "Les Jardins Suspendus",
-        "description": "Un espace vert unique avec des plantes venues des quatre coins du monde.",
-        "address": "Rue du Fort, Le Havre",
-        "image": "https://picsum.photos/200/300?random=4.webp"
+        "name": "L'Eclat",
+        "description": "Au programme de L'Eclat, les spectateurs peuvent découvrir des concerts et des pièces de théâtre, des spectacles jeune public.",
+        "address": "Place du Général de Gaulle, 27500 Pont Audemer",
+        "image": "eclat - interieur.jpg"
+      },
+      {
+        "name": "Micro-Folie",
+        "description": "Un nouvel espace culturel innovant, gratuit et ouvert à tous.",
+        "address": "Rue Stanislas Delaquaize, 27500 Pont-Audemer",
+        "image": "micro folie - interieur.jpg"
       }
-    ],
-    "addresses": [
+    ]
+  },
+  {
+    "type": "Les Bonnes Adresses",
+    "places": [
       {
-        "name": "La Librairie Havraise",
-        "description": "Une librairie indépendante avec un large choix de livres et un coin café.",
-        "address": "27 Rue Victor Hugo, Le Havre",
-        "image": "https://picsum.photos/200/300?random=5.webp"
+        "name": "LA FONDERIE",
+        "description": "Un lieu de diverstissement avec Casino, billard, et bowling.",
+        "address": "60 rue du Maquis Surcouf 27500 Pont-Audemer",
+        "image": "lafonderie - interieur2.jpg"
       },
       {
-        "name": "Le Comptoir Bio",
-        "description": "Une boutique spécialisée dans les produits locaux et biologiques.",
-        "address": "8 Place des Gobelins, Le Havre",
-        "image": "https://picsum.photos/200/300?random=6.webp"
+        "name": "LES CASTORS RISLOIS",
+        "description": "Pour une sortie Canoë - Kayak en famille ou entre amis, le centre vous accueille toute l'année.",
+        "address": "Rue Pierre de Coubertin 27500 pont-Audemer",
+        "image": "les-castors-rislois3.jpg"
+      },
+      {
+        "name": "L’EDEN ROCK",
+        "description": "Avec ses soirées à thèmes, ses concerts, ses happy hours.",
+        "address": "4, place du Maréchal-Gallieni 27500 Pont-Audemer",
+        "image": "edenrock - interieur.jpg"
+      },
+      {
+        "name": "Centres équestres et balades en calèches",
+        "description": "Pont-Audemer et le Val de Risle se dévoilent à cheval !",
+        "address": "15 route de l’église, 27290 Thierville",
+        "image": "Rando-à-cheval2.jpg"
       }
     ]
   }
-  
+]
