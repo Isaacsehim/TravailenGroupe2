@@ -1,43 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pont-Audemer</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
+    <script src="https://kit.fontawesome.com/dd845416b8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="section-accueil">
-        <div class="accueil-conteneur">
-            <h1 class="accueil-titre">Pont-Audemer</h1>
-            <p class="accueil-sous-titre">"Joyau de la normandie, entre histoire, culture et paysages enchanteurs. huhu"</p>
+        <div class="accueil-gradient">
+            <div class="accueil-conteneur">
+                <h1 class="accueil-titre">Pont-Audemer</h1>
+                <p class="accueil-sous-titre">"Joyau de la normandie, entre histoire, culture et paysages enchanteurs.
+                    huhu"
+                </p>
+            </div>
+        </div>
         </div>
     </header>
-    <nav class="barre-navigation">
-        <button class="bouton-navigation">Restaurants</button>
-        <button class="bouton-navigation">Lieux Culturels</button>
-        <button class="bouton-navigation">Bonnes adresses</button>
-    </nav>
-    <main>
-        <section class="carte-lieu">
-            <img src="image.jpg" alt="lieu" class="image-lieu">
-            <div class="contenu-lieu">
-                <h2 class="titre-lieu">Nom du lieu</h2>
-                <button class="bouton-informations">Afficher les informations</button>
-                <p class="description-lieu">Description courte du lieu sur plusieurs lignes avec des informations utiles.</p>
-                <p class="adresse-lieu">Adresse complète, sur une ligne <br> Call to action ?</p>
+    <section class="barre-navigation">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+                    type="button" role="tab" aria-controls="pills-all" aria-selected="true">Tous les lieux</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-resto-tab" data-bs-toggle="pill" data-bs-target="#pills-resto"
+                    type="button" role="tab" aria-controls="pills-resto" aria-selected="false">Restraurants</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-culture-tab" data-bs-toggle="pill" data-bs-target="#pills-culture"
+                    type="button" role="tab" aria-controls="pills-culture" aria-selected="false">Lieux
+                    culturels</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-adresse-tab" data-bs-toggle="pill" data-bs-target="#pills-adresse"
+                    type="button" role="tab" aria-controls="pills-adresse" aria-selected="false">Bonnes
+                    adresses</button>
+            </li>
+        </ul>
+    </section>
+    <section class="nav-content">
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+                tabindex="0">
+                <section class="carte-lieu">
+                    <img src="https://placehold.co/600x300/png" alt="lieu" class="image-lieu">
+                    <div class="contenu-lieu">
+                        <h2 class="titre-lieu">Nom du lieu</h2>
+                        <button class="bouton-informations" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Afficher les informations</button>
+                        <p class="description-lieu">Description courte du lieu sur plusieurs lignes avec des
+                            informations
+                            utiles.</p>
+                        <p class="adresse-lieu"><i class="fa-solid fa-location-dot"></i> Adresse complète, sur une ligne
+                        </p>
+                    </div>
+                </section>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Nom du lieu</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="https://placehold.co/600x300/png" class="img-cover">
+                                <span><i class="fa-regular fa-message"></i> Description</span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo alias doloremque esse
+                                    amet quisquam. Voluptate nobis animi illum earum ducimus nemo accusantium numquam
+                                    itaque possimus illo omnis laudantium, reiciendis fugit.</p>
+                                <span><i class="fa-solid fa-location-dot"></i> Localisation</span>
+                                <p>Adresse ligne informations, 11700 Code postal Ville</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+            <div class="tab-pane fade" id="pills-resto" role="tabpanel" aria-labelledby="pills-resto-tab" tabindex="0">
+                contenu
+            </div>
+            <div class="tab-pane fade" id="pills-culture" role="tabpanel" aria-labelledby="pills-culture-tab"
+                tabindex="0">...</div>
+            <div class="tab-pane fade" id="pills-adresse" role="tabpanel" aria-labelledby="pills-adresse-tab"
+                tabindex="0">...</div>
+        </div>
+    </section>
+
+    <main>
         <section class="section-contenu">
             <h3 class="contenu-titre">Historique</h3>
-            <p class="contenu-texte">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+            <p class="contenu-texte">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua."</p>
             <h3 class="contenu-titre">Patrimoine</h3>
-            <p class="contenu-texte">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+            <p class="contenu-texte">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua."</p>
         </section>
     </main>
     <footer class="footer">
         <p class="footer-texte">© 2024 Pont-Audemer. Tous droits réservés | Crew Turbo Flew 2024</p>
     </footer>
+    <script src="node_modules\@popperjs\core\dist\umd\popper.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
     <script src="assets/script.js"></script>
 </body>
+
 </html>
