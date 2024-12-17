@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Section Accueil */
+.section-accueil {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('images/pont-audemer.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 15vh 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accueil-conteneur {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.accueil-titre {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.accueil-sous-titre {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+/* Barre de navigation */
+.barre-navigation {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(240, 240, 240);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bouton-navigation {
+    font-size: 1.1rem;
+    background: rgb(200, 200, 200);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bouton-navigation:hover {
+    background: rgb(170, 170, 170);
+}
+
+/* Carte Lieu */
+.carte-lieu {
+    display: flex;
+    margin: 5vh auto;
+    width: 90%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-lieu {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contenu-lieu {
+    padding: 2rem;
+    width: 60%;
+}
+
+.titre-lieu {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.bouton-informations {
+    background: #343a40;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bouton-informations:hover {
+    background: #212529;
+}
+
+.description-lieu,
+.adresse-lieu {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Section Contenu */
+.section-contenu {
+    padding: 4vh 5%;
+    background: rgb(250, 250, 250);
+}
+
+.contenu-titre {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contenu-texte {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #343a40;
+    color: white;
+}
+
+.footer-texte {
+    font-size: 1rem;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Mobile - 320px à 767px */
+@media screen and (max-width: 767px) {
+    .section-accueil {
+        padding: 10vh 5%;
+    }
+
+    .accueil-titre {
+        font-size: 2.5rem;
+    }
+
+    .accueil-sous-titre {
+        font-size: 1.2rem;
+    }
+
+    .barre-navigation {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .bouton-navigation {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .carte-lieu {
+        flex-direction: column;
+        width: 95%;
+        margin: 5vh auto;
+    }
+
+    .image-lieu {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenu-lieu {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .contenu-titre {
+        font-size: 1.5rem;
+    }
+
+    .contenu-texte {
+        font-size: 1rem;
+    }
+}
+
+/* Tablette - 768px à 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .section-accueil {
+        padding: 12vh 5%;
+    }
+
+    .accueil-titre {
+        font-size: 2.8rem;
+    }
+
+    .accueil-sous-titre {
+        font-size: 1.3rem;
+    }
+
+    .barre-navigation {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .bouton-navigation {
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+    }
+
+    .carte-lieu {
+        flex-direction: column;
+        margin: 4vh auto;
+    }
+
+    .image-lieu {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenu-lieu {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* Bureau - 992px et plus */
+@media screen and (min-width: 992px) {
+    .barre-navigation {
+        flex-direction: row;
+    }
+
+    .bouton-navigation {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+
+    .carte-lieu {
+        flex-direction: row;
+        width: 90%;
+        margin: 5vh auto;
+    }
+
+    .image-lieu {
+        width: 40%;
+    }
+
+    .contenu-lieu {
+        width: 60%;
+    }
+
+    .contenu-titre {
+        font-size: 1.8rem;
+    }
+
+    .contenu-texte {
+        font-size: 1.1rem;
+    }
+}

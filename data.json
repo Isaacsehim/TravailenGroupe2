@@ -1,0 +1,45 @@
+{
+    "restaurants": [
+      {
+        "name": "Le Gourmet Havrais",
+        "description": "Un restaurant élégant proposant une cuisine locale et raffinée.",
+        "address": "12 Rue de Paris, Le Havre",
+        "image": "https://picsum.photos/200/300?random=1.webp"
+      },
+      {
+        "name": "Chez Mario",
+        "description": "Un petit coin d’Italie avec des pizzas au feu de bois et des pâtes maison.",
+        "address": "45 Avenue Foch, Le Havre",
+        "image": "https://picsum.photos/200/300?random=2.webp"
+      }
+    ],
+    "cultural": [
+      {
+        "name": "Musée d'Art Moderne André Malraux (MuMa)",
+        "description": "Découvrez l'une des plus grandes collections impressionnistes de France.",
+        "address": "2 Boulevard Clemenceau, Le Havre",
+        "image": "https://picsum.photos/200/300?random=3.webp"
+      },
+      {
+        "name": "Les Jardins Suspendus",
+        "description": "Un espace vert unique avec des plantes venues des quatre coins du monde.",
+        "address": "Rue du Fort, Le Havre",
+        "image": "https://picsum.photos/200/300?random=4.webp"
+      }
+    ],
+    "addresses": [
+      {
+        "name": "La Librairie Havraise",
+        "description": "Une librairie indépendante avec un large choix de livres et un coin café.",
+        "address": "27 Rue Victor Hugo, Le Havre",
+        "image": "https://picsum.photos/200/300?random=5.webp"
+      },
+      {
+        "name": "Le Comptoir Bio",
+        "description": "Une boutique spécialisée dans les produits locaux et biologiques.",
+        "address": "8 Place des Gobelins, Le Havre",
+        "image": "https://picsum.photos/200/300?random=6.webp"
+      }
+    ]
+  }
+  
