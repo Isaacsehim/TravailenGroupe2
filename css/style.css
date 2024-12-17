@@ -8,7 +8,7 @@ body {
 
 /* Section Accueil */
 .section-accueil {
-    background:url(https://placehold.co/600x300/png);
+    background:url(/img/pont-audemer1.jpg);
     background-size: cover;
     background-position: center;
     color: white;
@@ -37,7 +37,7 @@ body {
 }
 
 .accueil-sous-titre {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
@@ -255,7 +255,7 @@ body {
     }
 
     .accueil-sous-titre {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .barre-navigation {
@@ -307,7 +307,7 @@ body {
     }
 
     .accueil-sous-titre {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .barre-navigation {
