@@ -1,3 +1,28 @@
+// il faut faire un fetch pour récupérer les données du fichier data.json
+fetch('data.json')
+  // on a un objet response qui contient les données de la requête
+  .then(response => response.json())
+  // on a un objet data qui contient les données du fichier data.json
+  .then(data => {
+    console.log(data) // nous affichons les données dans la console pour vérifier que tout est ok et pour verifier le contenu du tableau data
+    // nous allons maintenant boucler sur les données pour les afficher dans le DOM
+    for (item of data) { // data est un tableau d'objets, nous allons boucler sur ce tableau pour afficher chaque objet à l'aide de la syntaxe ${}
+      // item étant un objet, nous pouvons accéder à ses propriétés en utilisant la syntaxe item.name, item.description, item.image
+      document.querySelector('#pills-all').innerHTML += 
+      `<img src="${place.image}" alt="${place.name}" class="image-lieu">
+      <div class="contenu-lieu">
+          <h2 class="titre-lieu">${place.name}</h2>
+          <button class="bouton-informations" data-bs-toggle="modal" data-bs-target="#modal-${place.name.replace(/\s+/g, '-').toLowerCase()}">Afficher les informations</button>
+          <p class="description-lieu">${place.description}</p>
+          <p class="adresse-lieu"><i class="fa-solid fa-location-dot"></i> ${place.address}</p>
+      </div>`;
+      
+    }
+
+  })
+  .catch(error => console.error(error)); // en cas d'erreur, nous affichons un message d'erreur dans la console.
+
+
 // Fonction pour afficher les lieux en fonction de la catégorie sélectionnée
 function displayPlaces(data, type) {
     const tabContent = document.querySelector('#pills-tabContent');
@@ -10,13 +35,7 @@ function displayPlaces(data, type) {
             section.classList.add('carte-lieu');
 
             section.innerHTML = `
-                <img src="img/${type}/${place.image}" alt="${place.name}" class="image-lieu">
-                <div class="contenu-lieu">
-                    <h2 class="titre-lieu">${place.name}</h2>
-                    <button class="bouton-informations" data-bs-toggle="modal" data-bs-target="#modal-${place.name.replace(/\s+/g, '-').toLowerCase()}">Afficher les informations</button>
-                    <p class="description-lieu">${place.description}</p>
-                    <p class="adresse-lieu"><i class="fa-solid fa-location-dot"></i> ${place.address}</p>
-                </div>
+
             `;
 
             tabContent.appendChild(section);
@@ -37,7 +56,7 @@ function displayPlaces(data, type) {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="img/${type}/${place.image}" class="img-cover">
+                            <img src="${place.image}" class="img-cover">
                             <span><i class="fa-regular fa-message"></i> Description</span>
                             <p>${place.description}</p>
                             <span><i class="fa-solid fa-location-dot"></i> Localisation</span>
@@ -70,15 +89,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             document.getElementById('pills-all-tab').addEventListener('click', () => {
-                displayPlaces(data, 'Restaurant');
-                displayPlaces(data, 'Lieux Culturels');
-                displayPlaces(data, 'Les Bonnes Adresses');
+                const allPlaces = data.reduce((acc, category) => acc.concat(category.places.map(place => ({ ...place, type: category.type }))), []);
+                displayAllPlaces(allPlaces);
             });
-
-            document.getElementById('pills-all-types-tab').addEventListener('click', () => {
-                data.forEach(category => {
-                    displayPlaces(data, category.type);
+            
+            function displayAllPlaces(places) {
+                const tabContent = document.querySelector('#pills-tabContent');
+                tabContent.innerHTML = '';
+                places.forEach(place => {
+                    // Ajoutez ici le même code que dans displayPlaces pour créer des sections
                 });
+            }
             });
 
             // Afficher la catégorie par défaut au chargement

@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,15 +8,17 @@ body {
 
 /* Section Accueil */
 .section-accueil {
-    background:url(../img/pont-audemer1.jpg);
+    background:url(../img/pont-audemer1.webp);
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
+    padding:0px;
+    margin:0px;
 }
 
 .accueil-gradient {
-    background: linear-gradient(0deg, rgb(107, 107, 107),  rgba(255, 255, 255, 0.5));
+    background: linear-gradient(0deg, rgb(145, 188, 204),  rgba(255, 255, 255, 0.5));
     width:100%;
     display: flex;
     align-items: center;
@@ -24,16 +26,12 @@ body {
     padding: 15vh 5%;
 }
 
-.accueil-conteneur {
-    max-width: 800px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 15px;
-}
-
 .accueil-titre {
-    font-size: 3rem;
+    font-family: Helvetica;
+    font-weight: 600;
+    font-size: 3.8rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px rgba(0,0,0, 0.2);
 }
 
 .accueil-sous-titre {
@@ -43,14 +41,18 @@ body {
 
 .accueil-box {
     width:100%;
-    background:rgb(107, 107, 107);
+    background:rgb(145, 188, 204);
     padding:0px;
     margin:0px;
+    display:flex;
+    justify-content: center;
 }
 
 .accueil-box p {
-    font-size:1rem;
+    font-size:1.4rem;
     text-align:center;
+    padding:30px 40px 60px 40px;
+    width:50%;
 }
 
 /* Barre de navigations/onglets */
@@ -63,6 +65,7 @@ body {
     background: rgb(240, 240, 240);
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top:-1rem;
 }
 
 .barre-navigation i {
@@ -74,38 +77,38 @@ body {
 
 #pills-resto-tab,#pills-culture-tab,#pills-adresse-tab,#pills-all-tab {
     font-size: 1.1rem;
-    background: rgb(200, 200, 200);
+    background:rgb(153, 172, 179);
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
     transition:0.3s ease;
-    color:#000;
+    color:#fff;
     margin:0px 10px;
     font-family: arial;
     border-radius:15px;
 }
 
 #pills-resto-tab.active {
-    background: rgb(170, 170, 170);
-
+    background: #fff;
+    color:#000;
 }
 
 #pills-culture-tab.active {
-    background: rgb(170, 170, 170);
-
+    background: #fff;
+    color:#000;
 }
 
 #pills-adresse-tab.active {
-    background: rgb(170, 170, 170);
-
+    background: #fff;
+    color:#000;
 }
 
 #pills-all-tab.active {
-    background: rgb(170, 170, 170);
+    background: #fff;
+    color:#000;
 }
 
 .nav-link {
-    font-family: playfair display;
     font-weight: 600;
     font-size: 1.5rem;
     background: #fff;
@@ -156,7 +159,7 @@ body {
 }
 
 .bouton-informations {
-    background: #343a40;
+    background:rgb(145, 188, 204, 0.8);
     color: white;
     border: none;
     padding: 0.8rem 1.2rem;
@@ -168,7 +171,7 @@ body {
 }
 
 .bouton-informations:hover {
-    background: #212529;
+    background:rgb(145, 188, 204, 1);
 }
 
 .description-lieu,
@@ -179,6 +182,7 @@ body {
 
 .adresse-lieu i {
     font-size:1rem;
+    color:#91bccc;
 }
 
 /*MODAL*/ 
@@ -198,20 +202,23 @@ body {
 
 .modal-body i {
     font-size:1rem;
-
+    color:rgb(145, 188, 204);
 }
 
 .modal-body span {
+    font-family: Helvetica;
     font-weight:600;
     font-size:1.2rem;
+}
+
+.modal-header i {
+    color:rgb(145, 188, 204);
 }
 
 .img-cover {
     width:100%;
     padding-bottom:20px;
 }
-
-
 
 /* Section Contenu */
 .section-contenu {
@@ -222,6 +229,12 @@ body {
 .contenu-titre {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    font-family: Helvetica;
+    font-weight:600;
+}
+
+.contenu-titre i {
+    color:rgb(145, 188, 204);
 }
 
 .contenu-texte {
@@ -234,7 +247,7 @@ body {
 .footer {
     text-align: center;
     padding: 2rem 0;
-    background: #343a40;
+    background:rgb(145, 188, 204);
     color: white;
 }
 
@@ -247,16 +260,24 @@ body {
 /* Mobile - 320px à 767px */
 @media screen and (max-width: 767px) {
     .section-accueil {
-        padding: 10vh 5%;
+        padding:0px;
     }
 
     .accueil-titre {
-        font-size: 2.5rem;
+        font-size: 4.5rem;
     }
 
     .accueil-sous-titre {
         font-size: 1rem;
     }
+
+    .accueil-box p {
+        font-size:1.4rem;
+        text-align:center;
+        padding:30px 40px 60px 40px;
+        width:80%;
+    }
+    
 
     .barre-navigation {
         flex-direction: column;
@@ -269,6 +290,24 @@ body {
         margin: 0.5rem 0;
         width: 100%;
         padding: 1rem;
+    }
+
+    /***ONGLETS***/
+
+    #pills-tab {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+    }
+
+    .nav-link {
+        width:300px;
+    }
+
+    .barre-navigation i {
+        display:none;
     }
 
     .carte-lieu {
@@ -299,17 +338,24 @@ body {
 /* Tablette - 768px à 991px */
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .section-accueil {
-        padding: 12vh 5%;
+        padding:0px;
     }
 
     .accueil-titre {
-        font-size: 2.8rem;
+        font-size: 4.8rem;
     }
 
     .accueil-sous-titre {
         font-size: 1rem;
     }
 
+    .accueil-box p {
+        font-size:1.4rem;
+        text-align:center;
+        padding:30px 40px 60px 40px;
+        width:80%;
+    }
+    
     .barre-navigation {
         flex-direction: column;
         padding: 1rem 0;
@@ -318,6 +364,24 @@ body {
     .bouton-navigation {
         font-size: 1.1rem;
         margin: 0.5rem 0;
+    }
+
+    /***ONGLETS***/
+
+    #pills-tab {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:0.5rem;
+    }
+
+    .nav-link {
+        width:auto;
+    }
+
+    .barre-navigation i {
+        display:none;
     }
 
     .carte-lieu {
