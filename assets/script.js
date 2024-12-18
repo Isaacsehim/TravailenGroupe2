@@ -1,7 +1,7 @@
 // Fonction pour afficher les lieux en fonction de la catégorie sélectionnée
 function displayPlaces(data, type) {
-    const main = document.querySelector('main');
-    main.innerHTML = '';
+    const tabContent = document.querySelector('#pills-tabContent');
+    tabContent.innerHTML = '';
 
     let category = data.find(category => category.type === type);
     if (category) {
@@ -19,7 +19,7 @@ function displayPlaces(data, type) {
                 </div>
             `;
 
-            main.appendChild(section);
+            tabContent.appendChild(section);
 
             // Ajouter le modal pour chaque lieu
             const modal = document.createElement('div');
