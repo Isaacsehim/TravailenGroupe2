@@ -23,13 +23,13 @@
       {
         "name": "O Ciné Fil",
         "description": "votre restaurant traditionnel à Pont-Audemer, régalez vos papilles avec des produits frais et de saison. Au menu , de la cuisine  maison  française et de bistrot 100% faite maison.",
-        "address": "7 rue place de la Ville, 27500 Pont-Audemer",
+        "address": "7 Rue place de la Ville, 27500 Pont-Audemer",
         "image": "ocinefil - interieur2.jpg"
       },
       {
         "name": "BISTROT DU HAVRE",
         "description": "Charmant petit restaurant à pans de bois, qui évoque l’ambiance chaleureuse et conviviale d’une brasserie de quartier.",
-        "address": "3 Place du Pot D Etain, 27500 Pont-Audemer France",
+        "address": "3 Place du Pot D'Étain, 27500 Pont-Audemer France",
         "image": "bistrot-du-havre - interieur.jpg"
       }
     ]
@@ -40,7 +40,7 @@
       {
         "name": "Musée Alfred-Canel",
         "description": "La maison de l'écrivain Alfred Canel abrite des fonds anciens de bibliothèques de grande réputation avec des galeries d’arts.",
-        "address": "64, rue de la République, 27500 Pont Audemer",
+        "address": "64 Rue de la République, 27500 Pont Audemer",
         "image": "alfred canel - interieur.jpg"
       },
       {
@@ -63,19 +63,19 @@
       {
         "name": "LA FONDERIE",
         "description": "Un lieu de diverstissement avec Casino, billard, et bowling.",
-        "address": "60 rue du Maquis Surcouf 27500 Pont-Audemer",
+        "address": "60 Rue du Maquis Surcouf, 27500 Pont-Audemer",
         "image": "lafonderie - interieur2.jpg"
       },
       {
         "name": "LES CASTORS RISLOIS",
         "description": "Pour une sortie Canoë - Kayak en famille ou entre amis, le centre vous accueille toute l'année.",
-        "address": "Rue Pierre de Coubertin 27500 pont-Audemer",
+        "address": "Rue Pierre de Coubertin, 27500 pont-Audemer",
         "image": "les-castors-rislois3.jpg"
       },
       {
         "name": "L’EDEN ROCK",
         "description": "Avec ses soirées à thèmes, ses concerts, ses happy hours.",
-        "address": "4, place du Maréchal-Gallieni 27500 Pont-Audemer",
+        "address": "4 place du Maréchal-Gallieni, 27500 Pont-Audemer",
         "image": "edenrock - interieur.jpg"
       },
       {
